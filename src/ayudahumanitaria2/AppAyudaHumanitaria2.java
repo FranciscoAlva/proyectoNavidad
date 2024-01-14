@@ -5,7 +5,7 @@ import java.sql.*;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
+// Ayuda humanitaria v0.1 por Francisco Alvarez Rama
 //SE LLAMA AL METODO PARA LA CONEXION
 public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
 
