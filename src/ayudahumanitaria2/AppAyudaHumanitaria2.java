@@ -618,8 +618,18 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
         });
 
         BtnModificarZA.setText("Modificar");
+        BtnModificarZA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnModificarZAActionPerformed(evt);
+            }
+        });
 
         BtnEliminarZA.setText("Eliminar");
+        BtnEliminarZA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEliminarZAActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -677,6 +687,11 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(204, 255, 255));
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LISTADO DE ZONAS AFECTADAS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 255))); // NOI18N
+        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel8MouseClicked(evt);
+            }
+        });
 
         jTable4.setForeground(new java.awt.Color(0, 51, 255));
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
@@ -690,6 +705,11 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable4MouseClicked(evt);
+            }
+        });
         jScrollPane5.setViewportView(jTable4);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -908,7 +928,7 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
 
     // METODO PARA EL BOTON DE ELIMINAR DONANTES
     private void BtnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEliminarActionPerformed
-       
+       Object[] options = {"Si", "No", "Cancelar"};
         if (JOptionPane.showConfirmDialog(null, "QUIERE ELIMINAR DONANTE", "SALIR", JOptionPane.YES_NO_CANCEL_OPTION) == 0) {
             try {
                 PreparedStatement ps = cn.prepareStatement("DELETE FROM Donantes WHERE Id='" + txtId.getText() + "'");
@@ -1022,7 +1042,7 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
         
        if (JOptionPane.showConfirmDialog(null, "DESEA ELIMINAR ESTE PRODUCTO", "SALIR", JOptionPane.YES_NO_CANCEL_OPTION) == 0) {
         try {
-            PreparedStatement ps = cn.prepareStatement("DELETE FROM productos WHERE Id_Producto='" + txtIdProducto.getText() + "'");
+            PreparedStatement ps = cn.prepareStatement("DELETE FROM productos WHERE IdProducto='" + txtIdProducto.getText() + "'");
             int indice = ps.executeUpdate();
             if (indice > 0) {
                 datosproductos();
@@ -1035,9 +1055,19 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
         }
        }
     }//GEN-LAST:event_BtnEliminarProductoActionPerformed
-    
+    //METODO PARA SELECCIONAR UNA FILA DE LAS ONG Y BLOQUEAR EL BOTON GUARDAR PARA PODER MODIFICAR
     private void txtONGNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtONGNombreActionPerformed
-        // TODO add your handling code here:
+        
+        BtnGuardar.setEnabled(false);
+        BtnModificar.setEnabled(true);
+        int fila;
+        fila = this.jTable1.getSelectedRow();
+        this.txtId.setText(this.jTable1.getValueAt(fila, 0).toString());
+        this.txtNombre.setText(this.jTable1.getValueAt(fila, 1).toString());
+        this.txtPrimerApellido.setText(this.jTable1.getValueAt(fila, 2).toString());
+        this.txtSegundoApellido.setText(this.jTable1.getValueAt(fila, 3).toString());
+        this.txtDNI.setText(this.jTable1.getValueAt(fila, 4).toString());
+        this.txtLocalidad.setText(this.jTable1.getValueAt(fila, 5).toString());
     }//GEN-LAST:event_txtONGNombreActionPerformed
     
     //BOTON GUARDAR ONG
@@ -1134,6 +1164,68 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
             System.out.println("ERROR AL GUARDAR LA ZONA AFECTADA" + e);
         }
     }//GEN-LAST:event_BtnGuardarZAActionPerformed
+
+    // BOTON DE MODIFICAR DATOS ZONA AFECTADA
+    private void BtnModificarZAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificarZAActionPerformed
+        
+        try {
+            PreparedStatement ps = cn.prepareStatement("UPDATE zonaafectada SET NombreZA='" + txtNombreZA.getText() + "',PaisZA='" + txtPaisZA.getText() + "',CiudadZA='" + txtCiudadZA.getText() + "',NombreONG='" + txtNombreONGZA.getText() + "' WHERE IdZA='" + txtIdZA.getText() + "'");
+            int indice = ps.executeUpdate();
+
+            if (indice > 0) {
+                JOptionPane.showMessageDialog(rootPane, "DATOS ACTUALIZADOS CORRECTAMENTE");
+                datoszonaafectada();
+                limpiarentradas4();
+            } else {
+                JOptionPane.showMessageDialog(null, "NO SELECCIONO NINGUNA FILA");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "ERROR AL ACTUALIZAR DATOS" + e);
+        }
+    }//GEN-LAST:event_BtnModificarZAActionPerformed
+
+    // METODO PARA SELECCIONAR UNA FILA DE LAS ZONAS AFECTADAS Y BLOQUEAR EL BOTON GUARDAR PARA PODER MODIFICAR
+    private void jTable4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable4MouseClicked
+        
+        BtnGuardarZA.setEnabled(false);
+        BtnModificarZA.setEnabled(true);
+        int fila;
+        fila = this.jTable4.getSelectedRow();
+        this.txtIdZA.setText(this.jTable4.getValueAt(fila, 0).toString());
+        this.txtNombreZA.setText(this.jTable4.getValueAt(fila, 1).toString());
+        this.txtPaisZA.setText(this.jTable4.getValueAt(fila, 2).toString());
+        this.txtCiudadZA.setText(this.jTable4.getValueAt(fila, 3).toString());
+        this.txtNombreONGZA.setText(this.jTable4.getValueAt(fila, 4).toString());
+    }//GEN-LAST:event_jTable4MouseClicked
+
+    
+    // PARA BLOQUEAR BOTON MODIFICAR EN ZONA AFECTADA Y LIMPIAR LOS DATOS
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+        
+        BtnGuardarZA.setEnabled(true);
+        BtnModificarZA.setEnabled(false);
+        limpiarentradas4();
+    }//GEN-LAST:event_jPanel8MouseClicked
+
+    // BOTON ELIMINAR ZONA AFECTADA
+    private void BtnEliminarZAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEliminarZAActionPerformed
+        
+         
+        if (JOptionPane.showConfirmDialog(null, "QUIERE ELIMINAR LA ZONA AFECTADA", "SALIR", JOptionPane.YES_NO_CANCEL_OPTION) == 0) {
+            try {
+                PreparedStatement ps = cn.prepareStatement("DELETE FROM zonaafectada WHERE IdZA='" + txtIdZA.getText() + "'");
+                int indice = ps.executeUpdate();
+                if (indice > 0) {
+                    datoszonaafectada();
+                } else {
+                    System.out.println("FILA NO SELECCIONADA");
+                }
+                limpiarentradas4();
+            } catch (SQLException e) {
+                System.out.println("ERROR AL ELIMINAR DATOS" + e);
+            }
+        }
+    }//GEN-LAST:event_BtnEliminarZAActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -1359,7 +1451,7 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
         modelo.addColumn("Ciudad");
         modelo.addColumn("Nombre ONG");
         jTable4.setModel(modelo);
-        String consultasql = "select*from ong";
+        String consultasql = "select * from zonaafectada";
         String data4[] = new String[5];
 
         Statement st;
@@ -1375,6 +1467,7 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
                 modelo.addRow(data4);
             }
         } catch (SQLException e) {
+            System.out.println("El error esta aqui");
             System.out.println("Error al mostrar datos " + e);
         }
     }
