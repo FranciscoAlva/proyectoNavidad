@@ -119,11 +119,11 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Datos del Donante", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 255))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(0, 0, 153));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingresar Datos del Donante", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Id");
 
@@ -132,23 +132,23 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
         txtId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtId.setEnabled(false);
 
-        jLabel2.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Nombre");
 
-        jLabel3.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Primer Apellido");
 
-        jLabel4.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Segundo Apellido");
 
-        jLabel5.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("DNI");
 
-        jLabel6.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Localidad");
 
@@ -236,8 +236,8 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Listado de Donantes", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 255))); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(0, 0, 153));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Listado de Donantes", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel2MouseClicked(evt);
@@ -280,10 +280,10 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INGRESA EL PRODUCTO A DONAR", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 255))); // NOI18N
+        jPanel3.setBackground(new java.awt.Color(0, 0, 153));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INGRESA EL PRODUCTO A DONAR", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jLabel7.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("ID Producto");
 
@@ -295,18 +295,18 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Nombre de producto");
 
-        jLabel9.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Tipo de Producto");
 
         comboProductos.setForeground(new java.awt.Color(51, 51, 255));
         comboProductos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONA UNA OPCION", "COMIDA", "MEDICINA", "ROPA", "OTROS" }));
 
-        jLabel10.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Descripcion del Producto");
 
@@ -314,7 +314,7 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
         txtDescripcionProducto.setRows(5);
         jScrollPane2.setViewportView(txtDescripcionProducto);
 
-        jLabel11.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Id Donante");
 
@@ -339,7 +339,7 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Id ONG");
 
@@ -399,11 +399,11 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
                 .addComponent(BtnModificarProducto)
                 .addGap(18, 18, 18)
                 .addComponent(BtnEliminarProducto)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LISTADO DE PRODUCTO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 255))); // NOI18N
+        jPanel4.setBackground(new java.awt.Color(0, 51, 153));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LISTADO DE PRODUCTO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel4MouseClicked(evt);
@@ -446,17 +446,17 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel5.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INGRESA LOS DATOS DE ONG", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 255))); // NOI18N
+        jPanel5.setBackground(new java.awt.Color(0, 51, 153));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INGRESA LOS DATOS DE ONG", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jLabel13.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("IdONG");
 
         txtONG.setBackground(new java.awt.Color(0, 0, 0));
         txtONG.setEnabled(false);
 
-        jLabel14.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Nombre ONG");
 
@@ -466,11 +466,11 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel15.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("CIF ");
 
-        jLabel16.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("Localidad de ONG");
 
@@ -543,8 +543,8 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel6.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LISTADO DE ONG", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 255))); // NOI18N
+        jPanel6.setBackground(new java.awt.Color(0, 0, 153));
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LISTADO DE ONG", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel6MouseClicked(evt);
@@ -585,28 +585,28 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel7.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INGRESA DATOS DE LA ZONA AFECTADA", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 255))); // NOI18N
+        jPanel7.setBackground(new java.awt.Color(0, 0, 153));
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INGRESA DATOS DE LA ZONA AFECTADA", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jLabel17.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Id Zona Afectada");
 
         txtIdZA.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel18.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Nombre Zona Afectada");
 
-        jLabel19.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("Pais");
 
-        jLabel20.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("Ciudad");
 
-        jLabel21.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("Nombre ONG");
 
@@ -685,8 +685,8 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel8.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LISTADO DE ZONAS AFECTADAS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 255))); // NOI18N
+        jPanel8.setBackground(new java.awt.Color(0, 0, 153));
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LISTADO DE ZONAS AFECTADAS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel8MouseClicked(evt);
@@ -729,11 +729,14 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(204, 255, 255));
-        jMenuBar1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "App de Ayuda Humanitaria", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 204))); // NOI18N
-        jMenuBar1.setForeground(new java.awt.Color(0, 0, 204));
+        jMenuBar1.setBackground(new java.awt.Color(0, 51, 153));
+        jMenuBar1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "App de Ayuda Humanitaria", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
         jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        jMenu1.setBackground(new java.awt.Color(0, 0, 204));
+        jMenu1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jMenu1.setForeground(new java.awt.Color(255, 255, 255));
         jMenu1.setText("Donantes");
 
         jMenuItem1.setText("Abrir");
@@ -746,6 +749,8 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jMenu2.setForeground(new java.awt.Color(255, 255, 255));
         jMenu2.setText("Productos");
         jMenu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -763,6 +768,8 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jMenu3.setForeground(new java.awt.Color(255, 255, 255));
         jMenu3.setText("ONG");
 
         jMenuItem3.setText("Abrir");
@@ -775,6 +782,8 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
+        jMenu4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jMenu4.setForeground(new java.awt.Color(255, 255, 255));
         jMenu4.setText("Zona Afectada");
 
         jMenuItem4.setText("Abrir");
