@@ -5,7 +5,7 @@ import java.sql.*;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-// Ayuda humanitaria v0.1 por Francisco Alvarez Rama
+
 //SE LLAMA AL METODO PARA LA CONEXION
 public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
 
@@ -953,7 +953,8 @@ public class AppAyudaHumanitaria2 extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_BtnEliminarActionPerformed
-    //METODO QUE SE VEAN LOS PANELES EN EL MENU PRODUCTOS
+    
+//METODO QUE SE VEAN LOS PANELES EN EL MENU PRODUCTOS
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         
         jPanel1.setVisible(false);
